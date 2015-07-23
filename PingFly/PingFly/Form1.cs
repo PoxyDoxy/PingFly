@@ -84,6 +84,13 @@ namespace PingFly
                 server5result.Text = "";
                 server6result.Text = "";
 
+                this.server1result.ForeColor = Color.Black; 
+                this.server2result.ForeColor = Color.Black; 
+                this.server3result.ForeColor = Color.Black; 
+                this.server4result.ForeColor = Color.Black; 
+                this.server5result.ForeColor = Color.Black; 
+                this.server6result.ForeColor = Color.Black; 
+
                 // ServerAmount = 1
                 if (serveramount.SelectedItem == "1")
                 {
@@ -599,6 +606,13 @@ namespace PingFly
                 dots4.Text = "";
                 dots5.Text = "";
                 dots6.Text = "";
+
+                this.server1result.ForeColor = Color.Black;
+                this.server2result.ForeColor = Color.Black;
+                this.server3result.ForeColor = Color.Black;
+                this.server4result.ForeColor = Color.Black;
+                this.server5result.ForeColor = Color.Black;
+                this.server6result.ForeColor = Color.Black;
 
                 perthservers.Enabled = true;
 
