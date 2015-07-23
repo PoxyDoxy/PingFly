@@ -45,11 +45,11 @@ namespace PingFly
         {
             if (this.InvokeRequired)
             {
-                this.Invoke(new MethodInvoker(delegate() { CheckForUpdate(); }));
+                this.Invoke(new MethodInvoker(delegate () { CheckForUpdate(); }));
             }
             else
             {
-                Version localversion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;  
+                Version localversion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                 Version latestversion = new Version(GetLatestVersion());
                 //Change < to == to set debugging mode
                 if (localversion.CompareTo(latestversion) < 0)
@@ -93,7 +93,7 @@ namespace PingFly
                         loadmainform.Show();
                     }*/
                 }
-                else 
+                else
                 {
                     this.Visible = false;
                     Form loadmainform = new Form1();
