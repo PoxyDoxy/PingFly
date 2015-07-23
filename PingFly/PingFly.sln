@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingFly", "PingFly\PingFly.csproj", "{3962199C-0FB7-4578-B307-ABA797D029CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		Submit|x86 = Submit|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Debug|x86.ActiveCfg = Debug|x86
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Debug|x86.Build.0 = Debug|x86
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Release|x86.ActiveCfg = Release|x86
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Release|x86.Build.0 = Release|x86
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Submit|x86.ActiveCfg = Submit|x86
+		{3962199C-0FB7-4578-B307-ABA797D029CB}.Submit|x86.Build.0 = Submit|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
