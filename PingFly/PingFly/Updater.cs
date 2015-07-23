@@ -131,7 +131,6 @@ namespace PingFly
         private void yesupdate_Click(object sender, EventArgs err)
         {
             updatelabel.Text = "Downloading Update";
-            MessageBox.Show("Downloading Update");
             WebClient downloader = new WebClient();
             try
             {
