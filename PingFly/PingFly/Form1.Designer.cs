@@ -71,11 +71,13 @@
             this.startbutton = new System.Windows.Forms.Button();
             this.resetbutton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.packetloss = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.liveaverage = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
+            this.packetloss = new System.Windows.Forms.Label();
             this.maxping = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.minping = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.averageping = new System.Windows.Forms.Label();
@@ -526,8 +528,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.packetloss);
-            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.liveaverage);
+            this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.averageping);
             this.groupBox3.Controls.Add(this.label26);
@@ -537,35 +539,37 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             // 
-            // packetloss
+            // liveaverage
             // 
-            this.packetloss.AutoSize = true;
-            this.packetloss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.packetloss.Location = new System.Drawing.Point(60, 166);
-            this.packetloss.Name = "packetloss";
-            this.packetloss.Size = new System.Drawing.Size(21, 20);
-            this.packetloss.TabIndex = 20;
-            this.packetloss.Text = "...";
+            this.liveaverage.AutoSize = true;
+            this.liveaverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.liveaverage.Location = new System.Drawing.Point(57, 15);
+            this.liveaverage.Name = "liveaverage";
+            this.liveaverage.Size = new System.Drawing.Size(21, 20);
+            this.liveaverage.TabIndex = 21;
+            this.liveaverage.Text = "...";
             // 
-            // label21
+            // label23
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label21.Location = new System.Drawing.Point(39, 146);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(96, 20);
-            this.label21.TabIndex = 19;
-            this.label21.Text = "Packet Loss";
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label23.Location = new System.Drawing.Point(15, 15);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(41, 20);
+            this.label23.TabIndex = 22;
+            this.label23.Text = "Live:";
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.packetloss);
             this.groupBox4.Controls.Add(this.maxping);
+            this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.minping);
             this.groupBox4.Controls.Add(this.label30);
-            this.groupBox4.Location = new System.Drawing.Point(18, 53);
+            this.groupBox4.Location = new System.Drawing.Point(6, 59);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(141, 90);
+            this.groupBox4.Size = new System.Drawing.Size(162, 129);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             // 
@@ -573,27 +577,47 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label25.Location = new System.Drawing.Point(15, 23);
+            this.label25.Location = new System.Drawing.Point(12, 21);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(38, 20);
             this.label25.TabIndex = 15;
             this.label25.Text = "Min:";
             // 
+            // packetloss
+            // 
+            this.packetloss.AutoSize = true;
+            this.packetloss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.packetloss.Location = new System.Drawing.Point(51, 98);
+            this.packetloss.Name = "packetloss";
+            this.packetloss.Size = new System.Drawing.Size(21, 20);
+            this.packetloss.TabIndex = 20;
+            this.packetloss.Text = "...";
+            // 
             // maxping
             // 
             this.maxping.AutoSize = true;
             this.maxping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.maxping.Location = new System.Drawing.Point(51, 49);
+            this.maxping.Location = new System.Drawing.Point(48, 47);
             this.maxping.Name = "maxping";
             this.maxping.Size = new System.Drawing.Size(21, 20);
             this.maxping.TabIndex = 17;
             this.maxping.Text = "...";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label21.Location = new System.Drawing.Point(8, 74);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(100, 20);
+            this.label21.TabIndex = 19;
+            this.label21.Text = "Packet Loss:";
+            // 
             // minping
             // 
             this.minping.AutoSize = true;
             this.minping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.minping.Location = new System.Drawing.Point(51, 23);
+            this.minping.Location = new System.Drawing.Point(48, 21);
             this.minping.Name = "minping";
             this.minping.Size = new System.Drawing.Size(21, 20);
             this.minping.TabIndex = 15;
@@ -603,7 +627,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label30.Location = new System.Drawing.Point(11, 49);
+            this.label30.Location = new System.Drawing.Point(8, 47);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(42, 20);
             this.label30.TabIndex = 16;
@@ -613,7 +637,7 @@
             // 
             this.averageping.AutoSize = true;
             this.averageping.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.averageping.Location = new System.Drawing.Point(94, 26);
+            this.averageping.Location = new System.Drawing.Point(57, 39);
             this.averageping.Name = "averageping";
             this.averageping.Size = new System.Drawing.Size(21, 20);
             this.averageping.TabIndex = 15;
@@ -623,11 +647,11 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label26.Location = new System.Drawing.Point(24, 26);
+            this.label26.Location = new System.Drawing.Point(8, 39);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(72, 20);
+            this.label26.Size = new System.Drawing.Size(48, 20);
             this.label26.TabIndex = 15;
-            this.label26.Text = "Average:";
+            this.label26.Text = "Total:";
             // 
             // PingAndPing
             // 
@@ -951,6 +975,8 @@
         private System.Windows.Forms.NumericUpDown threadsleepdelay;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button about;
+        private System.Windows.Forms.Label liveaverage;
+        private System.Windows.Forms.Label label23;
     }
 }
 
