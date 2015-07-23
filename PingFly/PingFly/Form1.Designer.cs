@@ -745,7 +745,7 @@
             this.sanfranciscoservers.Name = "sanfranciscoservers";
             this.sanfranciscoservers.Size = new System.Drawing.Size(175, 34);
             this.sanfranciscoservers.TabIndex = 23;
-            this.sanfranciscoservers.Text = "SanFrancisco";
+            this.sanfranciscoservers.Text = "San Francisco";
             this.sanfranciscoservers.UseVisualStyleBackColor = false;
             this.sanfranciscoservers.Click += new System.EventHandler(this.sanfranciscoservers_Click);
             // 
