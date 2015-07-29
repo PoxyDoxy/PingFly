@@ -39,6 +39,7 @@ namespace PingFly
             Variables.serveramount = Convert.ToString(serveramount.SelectedItem);
             if (startbutton.Text == "Start")
             {
+
                 startbutton.Text = "Stop";
                 serveramount.Enabled = false;
                 resetbutton.Enabled = false;
@@ -51,7 +52,84 @@ namespace PingFly
                 server6address.Enabled = false;
 
                 perthservers.Enabled = false;
-                PingAndPing.RunWorkerAsync();
+                try
+                {
+                    PingAndPing.RunWorkerAsync();
+                }
+                catch
+                {
+                    startbutton.Text = "Start";
+                    serveramount.Enabled = true;
+                    resetbutton.Enabled = true;
+                    Variables.workerisfree = true;
+
+                    // ServerAmount = 1
+                    if (serveramount.SelectedItem == "1")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = false;
+                        server3address.Enabled = false;
+                        server4address.Enabled = false;
+                        server5address.Enabled = false;
+                        server6address.Enabled = false;
+                    }
+
+                    // ServerAmount = 2
+                    if (serveramount.SelectedItem == "2")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = true;
+                        server3address.Enabled = false;
+                        server4address.Enabled = false;
+                        server5address.Enabled = false;
+                        server6address.Enabled = false;
+                    }
+
+                    // ServerAmount = 3
+                    if (serveramount.SelectedItem == "3")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = true;
+                        server3address.Enabled = true;
+                        server4address.Enabled = false;
+                        server5address.Enabled = false;
+                        server6address.Enabled = false;
+                    }
+
+                    // ServerAmount = 4
+                    if (serveramount.SelectedItem == "4")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = true;
+                        server3address.Enabled = true;
+                        server4address.Enabled = true;
+                        server5address.Enabled = false;
+                        server6address.Enabled = false;
+                    }
+
+                    // ServerAmount = 5
+                    if (serveramount.SelectedItem == "5")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = true;
+                        server3address.Enabled = true;
+                        server4address.Enabled = true;
+                        server5address.Enabled = true;
+                        server6address.Enabled = false;
+                    }
+
+                    // ServerAmount = 6
+                    if (serveramount.SelectedItem == "6")
+                    {
+                        server1address.Enabled = true;
+                        server2address.Enabled = true;
+                        server3address.Enabled = true;
+                        server4address.Enabled = true;
+                        server5address.Enabled = true;
+                        server6address.Enabled = true;
+                    }
+                }
+
             }
             else
             {
@@ -83,6 +161,8 @@ namespace PingFly
                 Variables.dots4 = "";
                 Variables.dots5 = "";
                 Variables.dots6 = "";
+
+                Variables.lostpackets = 0;
 
                 label8.Text = "(Status)";
                 label9.Text = "(Status)";
