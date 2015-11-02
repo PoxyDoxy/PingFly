@@ -768,6 +768,7 @@ namespace PingFly
                 Variables.averagetotal = 0;
                 Variables.packetloss = 0;
                 Variables.totalpackets = 0;
+                Variables.lostpackets = 0;
 
                 Variables.dots1 = "";
                 Variables.dots2 = "";
