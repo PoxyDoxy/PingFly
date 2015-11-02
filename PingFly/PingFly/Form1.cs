@@ -995,10 +995,17 @@ namespace PingFly
             serveramount.SelectedItem = "1";
             // Check for Updates
             Version localversion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-            Version latestversion = new Version(GetLatestVersion());
-            if (localversion.CompareTo(latestversion) < 0)
+            try
             {
-                button1.Visible = true;
+                Version latestversion = new Version(GetLatestVersion());
+                if (localversion.CompareTo(latestversion) < 0)
+                {
+                    button1.Visible = true;
+                }
+            }
+            catch
+            { 
+                // Error, Internet is down, or Update Server is down!
             }
         }
 
@@ -1014,7 +1021,7 @@ namespace PingFly
             }
             catch (WebException)
             {
-                MessageBox.Show("Oh No, Looks like either your Internet, or the update server is down.");
+                //MessageBox.Show("Oh No, Looks like either your Internet, or the update server is down.");
             }
 
             // Just in case the server returned something other than a valid version number. 
