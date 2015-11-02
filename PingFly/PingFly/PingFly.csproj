@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="4165f733-78b7-4575-8f83-7c23e8d23af5 %281%29.ico" />
+    <None Include="Resources\image_917484.gif" />
     <EmbeddedResource Include="Resources\PingFlyUpdater.exe" />
     <None Include="Resources\image_8777591.gif" />
     <None Include="Resources\image_877759.gif" />

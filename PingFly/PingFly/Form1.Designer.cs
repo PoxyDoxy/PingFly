@@ -97,6 +97,7 @@
             this.threadsleepdelay = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -492,9 +493,9 @@
             this.exitbutton.BackColor = System.Drawing.Color.WhiteSmoke;
             this.exitbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exitbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.exitbutton.Location = new System.Drawing.Point(12, 399);
+            this.exitbutton.Location = new System.Drawing.Point(7, 399);
             this.exitbutton.Name = "exitbutton";
-            this.exitbutton.Size = new System.Drawing.Size(77, 34);
+            this.exitbutton.Size = new System.Drawing.Size(77, 41);
             this.exitbutton.TabIndex = 2;
             this.exitbutton.Text = "Exit";
             this.exitbutton.UseVisualStyleBackColor = false;
@@ -821,7 +822,7 @@
             this.threadsleepdelay.Cursor = System.Windows.Forms.Cursors.Default;
             this.threadsleepdelay.DecimalPlaces = 1;
             this.threadsleepdelay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.threadsleepdelay.Location = new System.Drawing.Point(226, 409);
+            this.threadsleepdelay.Location = new System.Drawing.Point(251, 409);
             this.threadsleepdelay.Maximum = new decimal(new int[] {
             60,
             0,
@@ -846,7 +847,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(152, 411);
+            this.label20.Location = new System.Drawing.Point(177, 411);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(72, 13);
             this.label20.TabIndex = 31;
@@ -857,20 +858,36 @@
             this.about.BackColor = System.Drawing.Color.WhiteSmoke;
             this.about.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.about.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.about.Location = new System.Drawing.Point(95, 399);
+            this.about.Location = new System.Drawing.Point(88, 399);
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(28, 34);
+            this.about.Size = new System.Drawing.Size(28, 41);
             this.about.TabIndex = 32;
             this.about.Text = "?";
             this.about.UseVisualStyleBackColor = false;
             this.about.Click += new System.EventHandler(this.about_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.Image = global::PingFly.Properties.Resources.image_917484;
+            this.button1.Location = new System.Drawing.Point(122, 399);
+            this.button1.Name = "button1";
+            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.button1.Size = new System.Drawing.Size(41, 41);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(543, 442);
+            this.ClientSize = new System.Drawing.Size(553, 451);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.about);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.threadsleepdelay);
@@ -977,6 +994,7 @@
         private System.Windows.Forms.Button about;
         private System.Windows.Forms.Label liveaverage;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Button button1;
     }
 }
 

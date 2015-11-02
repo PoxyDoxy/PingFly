@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Net.NetworkInformation;
+using System.Net;
+using System.Text.RegularExpressions;
 
 namespace PingFly
 {
@@ -39,7 +41,7 @@ namespace PingFly
             Variables.serveramount = Convert.ToString(serveramount.SelectedItem);
             if (startbutton.Text == "Start")
             {
-
+                button1.Enabled = false;
                 startbutton.Text = "Stop";
                 serveramount.Enabled = false;
                 resetbutton.Enabled = false;
@@ -133,6 +135,7 @@ namespace PingFly
             }
             else
             {
+                button1.Enabled = true;
                 startbutton.Enabled = false;
 
                 PingAndPing.CancelAsync();
@@ -922,7 +925,7 @@ namespace PingFly
                     server5address.Enabled = true;
                     server6address.Enabled = true;
                 }
-
+                button1.Enabled = true;
                 startbutton.Text = "Start";
                 serveramount.Enabled = true;
                 resetbutton.Enabled = true;
@@ -977,6 +980,9 @@ namespace PingFly
             server6address.Text = "";
         }
 
+        private static readonly string latestVersionUrl = "http://update.murbak.com.au/PingFly/version.html";
+        private static readonly Regex versionNumberRegex = new Regex(@"([0-9]+\.)*[0-9]+");
+
         private void Form1_Load(object sender, EventArgs e)
         {
             // Start Program
@@ -987,9 +993,35 @@ namespace PingFly
             dots5.Text = "";
             dots6.Text = "";
             serveramount.SelectedItem = "1";
+            // Check for Updates
+            Version localversion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
+            Version latestversion = new Version(GetLatestVersion());
+            if (localversion.CompareTo(latestversion) < 0)
+            {
+                button1.Visible = true;
+            }
         }
 
+        private static string GetLatestVersion()
+        {
+            Uri latestVersionUri = new Uri(latestVersionUrl);
+            WebClient webClient = new WebClient();
+            string receivedData = string.Empty;
 
+            try
+            {
+                receivedData = webClient.DownloadString(latestVersionUrl).Trim();
+            }
+            catch (WebException)
+            {
+                MessageBox.Show("Oh No, Looks like either your Internet, or the update server is down.");
+            }
+
+            // Just in case the server returned something other than a valid version number. 
+            return versionNumberRegex.IsMatch(receivedData)
+                ? receivedData
+                : null;
+        }
 
         private void serveramount_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1203,6 +1235,13 @@ namespace PingFly
 
             Form about = new aboutform();
             about.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form loadupdateform = new Updater();
+            loadupdateform.Show();
         }
     }
 }
