@@ -98,6 +98,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.about = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.onstartup_tasks = new System.ComponentModel.BackgroundWorker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -881,6 +882,11 @@
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // onstartup_tasks
+            // 
+            this.onstartup_tasks.WorkerSupportsCancellation = true;
+            this.onstartup_tasks.DoWork += new System.ComponentModel.DoWorkEventHandler(this.onstartup_tasks_DoWork);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -995,6 +1001,7 @@
         private System.Windows.Forms.Label liveaverage;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button1;
+        private System.ComponentModel.BackgroundWorker onstartup_tasks;
     }
 }
 

@@ -986,6 +986,9 @@ namespace PingFly
         private void Form1_Load(object sender, EventArgs e)
         {
             // Start Program
+            onstartup_tasks.RunWorkerAsync();
+
+            // Set GUI Values to Empty
             dots1.Text = "";
             dots2.Text = "";
             dots3.Text = "";
@@ -1239,7 +1242,6 @@ namespace PingFly
 
         public void about_Click(object sender, EventArgs e)
         {
-
             Form about = new aboutform();
             about.ShowDialog();
         }
@@ -1249,6 +1251,38 @@ namespace PingFly
             this.Visible = false;
             Form loadupdateform = new Updater();
             loadupdateform.Show();
+        }
+
+        private void onstartup_tasks_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // Do Work Here
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadString("http://update.murbak.com.au/PingFly/backend/total-active.php?action=register");
+                }
+            }
+            catch 
+            {
+                // Either Internet is down, or Server is down.
+            }
+            // Loop Every 10 Minutes to Stay Online
+            while (true)
+            {
+                try
+                {
+                    using (WebClient client = new WebClient())
+                    {
+                        client.DownloadString("http://update.murbak.com.au/PingFly/backend/current-active.php?action=register");
+                    }
+                }
+                catch
+                {
+                    // Either Internet is down, or Server is down.
+                }
+                Thread.Sleep(600000);
+            }
         }
     }
 }
