@@ -54,6 +54,14 @@ namespace PingFly
                 server6address.Enabled = false;
 
                 perthservers.Enabled = false;
+                adelaidservers.Enabled = false;
+                brisbaneservers.Enabled = false;
+                sydneyservers.Enabled = false;
+                sanfranciscoservers.Enabled = false;
+                losangelesservers.Enabled = false;
+                parisservers.Enabled = false;
+                singaporeservers.Enabled = false;
+
                 try
                 {
                     PingAndPing.RunWorkerAsync();
@@ -150,6 +158,13 @@ namespace PingFly
                 Variables.workerisfree = true;
 
                 perthservers.Enabled = true;
+                adelaidservers.Enabled = true;
+                brisbaneservers.Enabled = true;
+                sydneyservers.Enabled = true;
+                sanfranciscoservers.Enabled = true;
+                losangelesservers.Enabled = true;
+                parisservers.Enabled = true;
+                singaporeservers.Enabled = true;
 
                 dots1.Text = "";
                 dots2.Text = "";
@@ -725,7 +740,7 @@ namespace PingFly
 
                 packetloss.Text = Variables.lostpackets + "/" + Variables.totalpackets;
 
-
+                
                 Variables.averagetotal = Variables.averagetotal + latency;
                 Variables.averageping = Variables.averagetotal / Variables.averagetick;
                 this.averageping.Text = Convert.ToString(Variables.averageping) + "ms";
@@ -783,7 +798,7 @@ namespace PingFly
                 averageping.Text = "...";
                 minping.Text = "...";
                 maxping.Text = "...";
-                packetloss.Text = "...";
+                packetloss.Text = "   /   ";
                 liveaverage.Text = "...";
 
                 label8.Text = "(Status)";
@@ -978,6 +993,15 @@ namespace PingFly
             server4address.Text = "";
             server5address.Text = "";
             server6address.Text = "";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private static readonly string latestVersionUrl = "http://update.murbak.com.au/PingFly/version.html";
@@ -1155,83 +1179,165 @@ namespace PingFly
 
         private void perthservers_Click(object sender, EventArgs e)
         {
-            serveramount.SelectedItem = "5";
+            ResetInfo(); 
+            serveramount.SelectedItem = "6";
             server1address.Text = "speedtest-per.cdn.on.net";
             server2address.Text = "speedtest.waia.asn.au";
             server3address.Text = "speedcheck.cdn.on.net";
             server4address.Text = "perthrackspace.com.au";
             server5address.Text = "murbak.com.au";
+            server6address.Text = "speedtest.wa.ix.asn.au";
+
+            perthservers.BackColor = Color.LawnGreen;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void adelaidservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "4";
+            server1address.Text = "ade1.speedtest.telstra.net";
+            server2address.Text = "speedtest-adl.cdn.on.net";
+            server3address.Text = "ae.speedtest.vodafone.com.au";
+            server4address.Text = "sa-prka-speedtest.aarnet.net.au";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.LawnGreen;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void sydneyservers_Click(object sender, EventArgs e)
         {
-            serveramount.SelectedItem = "5";
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "6";
+            server1address.Text = "syd1.speedtest.telstra.net";
+            server2address.Text = "speedtest-syd.cdn.on.net";
+            server3address.Text = "nsw-brwy-speedtest.aarnet.net.au";
+            server4address.Text = "speedtest.mirror.digitalpacific.com.au";
+            server5address.Text = "speedtest.mirror.nsw.au.glovine.com.au";
+            server6address.Text = "speedtest.cloudcentral.com.au";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.LawnGreen;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void brisbaneservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "5";
+            server1address.Text = "brs1.speedtest.telstra.net";
+            server2address.Text = "speedtest.bri.optusnet.com.au";
+            server3address.Text = "speedtest-bne.cdn.on.net";
+            server4address.Text = "bne03.speedtest.gcomm.com.au";
+            server5address.Text = "qld-gdpt-speedtest.aarnet.net.au";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.LawnGreen;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void sanfranciscoservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "4";
+            server1address.Text = "speedtest.fastmetrics.com";
+            server2address.Text = "speedtest15.suddenlink.net";
+            server3address.Text = "www.unwiredltd.com";
+            server4address.Text = "speedtest.monkeybrains.net";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.LawnGreen;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void losangelesservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "6";
+            server1address.Text = "speedtest01.lax.quadranet.com";
+            server2address.Text = "speedtest.lax.gigenet.com";
+            server3address.Text = "lax1a-speedtest.gorillaservers.com";
+            server4address.Text = "speedtest.lax2.hostduplex.com";
+            server5address.Text = "speedtest.lax.hugeserver.com";
+            server6address.Text = "losangeles-speedtest.atlanticmetro.net";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.LawnGreen;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void parisservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "6";
+            server1address.Text = "speedtest.par01.softlayer.com";
+            server2address.Text = "speedtest1.proxad.net";
+            server3address.Text = "paris1.speedtest.orange.fr";
+            server4address.Text = "paris.speedtest.mediactive-network.net";
+            server5address.Text = "lg.par-c.fdcservers.net";
+            server6address.Text = "www.testdebit.bbox.fr";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.LawnGreen;
+            singaporeservers.BackColor = Color.WhiteSmoke;
         }
 
         private void singaporeservers_Click(object sender, EventArgs e)
         {
-            server1address.Text = "";
-            server2address.Text = "";
-            server3address.Text = "";
-            server4address.Text = "";
-            server5address.Text = "";
-            server6address.Text = "";
+            ResetInfo(); 
+            serveramount.SelectedItem = "6";
+            server1address.Text = "speedtest10.vqbn.com";
+            server2address.Text = "speedtest.singnet.com.sg";
+            server3address.Text = "co2speedtest1.starhub.com";
+            server4address.Text = "speedtest.netpluz.asia";
+            server5address.Text = "speedtest2.indosat.com";
+            server6address.Text = "speedtest.myrepublic.com.sg";
+
+            perthservers.BackColor = Color.WhiteSmoke;
+            adelaidservers.BackColor = Color.WhiteSmoke;
+            brisbaneservers.BackColor = Color.WhiteSmoke;
+            sydneyservers.BackColor = Color.WhiteSmoke;
+            sanfranciscoservers.BackColor = Color.WhiteSmoke;
+            losangelesservers.BackColor = Color.WhiteSmoke;
+            parisservers.BackColor = Color.WhiteSmoke;
+            singaporeservers.BackColor = Color.LawnGreen;
         }
 
         private void threadsleepdelay_ValueChanged(object sender, EventArgs e)
@@ -1282,6 +1388,33 @@ namespace PingFly
                     // Either Internet is down, or Server is down.
                 }
                 Thread.Sleep(600000);
+            }
+        }
+
+        private void ResetInfo()
+        {
+            // Resets the Average Ping, Total Ping, and Lost Packets.
+            // Called when a pre-set server list is selected.
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(delegate() { ResetInfo(); }));
+            }
+            else
+            {
+                Variables.averagetotal = 0;
+                Variables.serverliveaverage = 0;
+                Variables.minping = -1;
+                Variables.maxping = -1;
+                Variables.averageping = -1;
+                Variables.averagetick = 0;
+                Variables.averagetotal = 0;
+                Variables.lostpackets = 0;
+                Variables.totalpackets = 0;
+                this.liveaverage.Text = "...";
+                this.averageping.Text = "...";
+                this.minping.Text = "...";
+                this.maxping.Text = "...";
+                this.packetloss.Text = "   /   ";
             }
         }
     }

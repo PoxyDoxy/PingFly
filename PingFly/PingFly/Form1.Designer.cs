@@ -591,9 +591,9 @@
             this.packetloss.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.packetloss.Location = new System.Drawing.Point(51, 98);
             this.packetloss.Name = "packetloss";
-            this.packetloss.Size = new System.Drawing.Size(21, 20);
+            this.packetloss.Size = new System.Drawing.Size(37, 20);
             this.packetloss.TabIndex = 20;
-            this.packetloss.Text = "...";
+            this.packetloss.Text = "   /   ";
             // 
             // maxping
             // 
@@ -722,7 +722,6 @@
             // singaporeservers
             // 
             this.singaporeservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.singaporeservers.Enabled = false;
             this.singaporeservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.singaporeservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.singaporeservers.Location = new System.Drawing.Point(83, 186);
@@ -736,7 +735,6 @@
             // parisservers
             // 
             this.parisservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.parisservers.Enabled = false;
             this.parisservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.parisservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parisservers.Location = new System.Drawing.Point(8, 186);
@@ -750,7 +748,6 @@
             // losangelesservers
             // 
             this.losangelesservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.losangelesservers.Enabled = false;
             this.losangelesservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.losangelesservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.losangelesservers.Location = new System.Drawing.Point(8, 146);
@@ -764,7 +761,6 @@
             // sanfranciscoservers
             // 
             this.sanfranciscoservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sanfranciscoservers.Enabled = false;
             this.sanfranciscoservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sanfranciscoservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sanfranciscoservers.Location = new System.Drawing.Point(8, 106);
@@ -778,7 +774,6 @@
             // brisbaneservers
             // 
             this.brisbaneservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.brisbaneservers.Enabled = false;
             this.brisbaneservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brisbaneservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brisbaneservers.Location = new System.Drawing.Point(99, 66);
@@ -792,7 +787,6 @@
             // sydneyservers
             // 
             this.sydneyservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.sydneyservers.Enabled = false;
             this.sydneyservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sydneyservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sydneyservers.Location = new System.Drawing.Point(8, 66);
@@ -806,7 +800,6 @@
             // adelaidservers
             // 
             this.adelaidservers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.adelaidservers.Enabled = false;
             this.adelaidservers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.adelaidservers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.adelaidservers.Location = new System.Drawing.Point(99, 26);

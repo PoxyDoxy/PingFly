@@ -75,10 +75,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(183, 51);
+            this.label2.Font = new System.Drawing.Font("OCR A Std", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(158, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 27);
+            this.label2.Size = new System.Drawing.Size(122, 21);
             this.label2.TabIndex = 5;
             this.label2.Text = "v0.0.0.0";
             // 
