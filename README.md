@@ -10,7 +10,7 @@ It measures the latency of up to 6 servers, with features such as:
   - Total Average (Average of all pings sent to servers).
   - Min Latency (Minimum Latency ever recorded, and which server it happened on).
   - Max Latency (Maximum Latency ever recorded, and which server it happened on).
-  - Lost Packets + Sent Packets
+  - Lost Packets + Sent Packets.
 - 8 PreSet Location Based Server Lists (Choose the closest near you).
   - Perth
   - Adelaide
