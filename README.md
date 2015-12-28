@@ -1,7 +1,9 @@
 # PingFly (.exe)
 ## What this does
-PingFly helps you monitor your Internet Connection on the fly, which is helpfull when gaming or doing important tasks. 
+PingFly helps you monitor your Internet Connection on the fly, which is helpfull when gaming or doing important tasks.
+
 To Keep results accurate and clean, It pings multiple servers at the same time to help you locate your Internet Fault.
+
 It measures the latency of up to 6 servers, with features such as:
 - Statistics:
   - Live Average (Average of current ping to servers).
