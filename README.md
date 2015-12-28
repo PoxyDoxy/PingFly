@@ -1,8 +1,14 @@
 # PingFly (.exe)
 ## What this does
-PingFly measures the latency of up to 6 servers, with features such as:
-- Averaging
-- Packet Loss Counting
+PingFly helps you monitor your Internet Connection on the fly, which is helpfull when gaming or doing important tasks. 
+To Keep results accurate and clean, It pings multiple servers at the same time to help you locate your Internet Fault.
+It measures the latency of up to 6 servers, with features such as:
+- Statistics:
+  - Live Average (Average of current ping to servers).
+  - Total Average (Average of all pings sent to servers).
+  - Min Latency (Minimum Latency ever recorded, and which server it happened on).
+  - Max Latency (Maximum Latency ever recorded, and which server it happened on).
+  - Lost Packets + Sent Packets
 - 8 PreSet Location Based Server Lists (Choose the closest near you).
   - Perth
   - Adelaide
@@ -12,6 +18,7 @@ PingFly measures the latency of up to 6 servers, with features such as:
   - Los Angeles
   - Paris
   - Singapore
+- Lets you monitor your internet 
 - Easy Updating to the latest version (only requires 2 clicks).
 Updater is not enforced, and does not hasstle the user at startup.
 - Contains Easter Egg (Super Obvious if you read the code).
@@ -26,6 +33,7 @@ PingFly updates itself through the WebServer backend, which contains:
 PingFly __TODO:__
 - Change Counter to match based on UUID, instead of IP (multiple people running under one IP/NAT).
 - Make WebServer BackEnd Get Latest Program Version through PHP to avoid version file+human error.
+- Add in a Percentage of Lost Packets (to see packet loss easyier).
 
 # PingFly Updater (.exe)
 ## What this does
