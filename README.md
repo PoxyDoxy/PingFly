@@ -20,7 +20,7 @@ It measures the latency of up to 6 servers, with features such as:
   - Los Angeles
   - Paris
   - Singapore
-- Lets you monitor your internet 
+- Lets you monitor your internet connection stability.
 - Easy Updating to the latest version (only requires 2 clicks).
 Updater is not enforced, and does not hasstle the user at startup.
 - Contains Easter Egg (Super Obvious if you read the code).
